@@ -22,7 +22,7 @@ notifications:
       - ledgy98@gmail.com
 
 before_deploy:
-  - zip -r sogonsogon-test*
+  - zip -r sogonsogon-test *
   - mkdir -p deploy
   - sudo mv sogonsogon-test.zip deploy/sogonsogon-test.zip
 
