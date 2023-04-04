@@ -21,6 +21,11 @@ notifications:
     recipients:
       - ledgy98@gmail.com
 
+before_deploy:
+  - zip -r springboot-webservice *
+  - mkdir -p deploy
+  - mv sogonsogon-test.zip deploy/sogonsogon-test.zip
+
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
