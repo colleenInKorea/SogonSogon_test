@@ -15,12 +15,6 @@ cache:
 
 script: "./gradlew clean build"
 
-# CI 실행 완료시 메일로 알람
-notifications:
-  email:
-    recipients:
-      - ledgy98@gmail.com
-
 before_deploy:
   - zip -r sogonsogon-test *
   - mkdir -p deploy
@@ -53,3 +47,9 @@ deploy:
     on:
       repo: colleenInKorea/Sogonsogon_BE
       branch: main
+
+# CI 실행 완료시 메일로 알람
+notifications:
+  email:
+    recipients:
+      - ledgy98@gmail.com
