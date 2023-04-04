@@ -33,7 +33,7 @@ deploy:
     on:
       repo: colleenInKorea/Sogonsogon_BE #Github 주소
       branch: main
-  - provider: codedeploy
+  - provider: code deploy
       access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
       secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
       bucket: my-github-actions-s3-server # S3 버킷
