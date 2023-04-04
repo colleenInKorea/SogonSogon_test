@@ -17,6 +17,6 @@ public class WebRestController {
     public String getProfile(){
         return Arrays.stream(env.getActiveProfiles())
                 .findFirst()
-                .orElse("");
+                .orElse("안되용");
     }
 }
