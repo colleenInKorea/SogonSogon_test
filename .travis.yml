@@ -24,7 +24,7 @@ notifications:
 before_deploy:
   - zip -r springboot-webservice *
   - mkdir -p deploy
-  - mv sogonsogon-test.zip deploy/sogonsogon-test.zip
+  - sudo mv sogonsogon-test.zip deploy/sogonsogon-test.zip
 
 deploy:
   - provider: s3
