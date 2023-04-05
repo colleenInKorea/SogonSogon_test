@@ -13,8 +13,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 public class SogonSgonApplication {
 
     public static final String APPLICATION_LOCATIONS = "spring.config.location="
-            + "classpath:application.properties,"
-            + "/app/config/springboot-webservice/real-application.properties";
+            + "classpath:application.properties";
+//            + "/app/config/springboot-webservice/real-application.properties";
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(SogonSgonApplication.class)
