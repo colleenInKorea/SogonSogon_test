@@ -1,5 +1,5 @@
-PROJECT_ROOT="/home/ubuntu"
-JAR_FILE="$PROJECT_ROOT/sogonsogon-0.0.1-SNAPSHOT.jar"
+PROJECT_ROOT="/home/ubuntu/app"
+JAR_FILE="$PROJECT_ROOT/spring-webapp.jar"
 
 APP_LOG="$PROJECT_ROOT/application.log"
 ERROR_LOG="$PROJECT_ROOT/error.log"
@@ -38,3 +38,4 @@ fi
 nohup java -jar -Dserver.port=${TARGET_PORT} ${JAR_FILE} > /home/ubuntu/nohup.out 2>&1 &
 echo "> Now new WAS runs at ${TARGET_PORT}."
 exit 0
+
