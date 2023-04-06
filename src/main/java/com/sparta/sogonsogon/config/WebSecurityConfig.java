@@ -75,6 +75,7 @@ public class WebSecurityConfig implements WebMvcConfigurer {
             .antMatchers("/api/member/login").permitAll()
             // 멤버조회
             .antMatchers("/api/member/**").permitAll()
+                .antMatchers("/profile").permitAll()
             // 라디오조회
             .antMatchers(HttpMethod.GET, "/api/radios/**").permitAll()
                 .antMatchers("/webSocket").permitAll()
