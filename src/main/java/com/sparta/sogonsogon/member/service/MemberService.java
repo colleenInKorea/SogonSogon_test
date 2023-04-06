@@ -166,5 +166,16 @@ public class MemberService {
         );
         return StatusResponseDto.success(HttpStatus.OK, new MemberResponseDto(member));
     }
+
+    public List<MemberOneResponseDto> getAll() {
+        List<Member> allmembers = memberRepository.findAll();
+        List<MemberOneResponseDto> memberOneResponseDtos = new ArrayList<>();
+
+        for (Member member : allmembers){
+            memberOneResponseDtos.add(MemberOneResponseDto.of(member));
+        }
+
+        return memberOneResponseDtos;
+    }
 }
 

@@ -22,9 +22,10 @@ echo "> Now Nginx proxies to ${TARGET_PORT}."
 
 # nginx를 reload 해준다.
 sudo service nginx reload
+#sudo service nginx force-reload
 
 echo "> Nginx reloaded."
 
 fuser -k ${CURRENT_PORT}/tcp
 
-echo "> finish switch port"
+echo "> finish switch port, ${CURRENT_PORT}"
