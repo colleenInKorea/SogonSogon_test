@@ -16,7 +16,15 @@ fi
 # 위 커맨드들을 통해 현재 타겟포트 가져오기
 
 # $ service_url.inc 파일을 현재 바뀐 서버의 포트로 변경
-echo "set \$service_url http://13.125.124.14:${TARGET_PORT};" | tee /home/ubuntu/service_url.inc
+if [ -n "$target_port" ]; then
+    # service_url.inc 파일에 새로운 값을 쓰기
+    echo "set \$service_url http://13.125.124.14:$target_port;" | tee /home/ubuntu/service_url.inc
+    echo "service_url.inc 파일이 업데이트되었습니다."
+else
+    echo "TARGET_PORT 환경 변수가 설정되어 있지 않습니다. service_url.inc 파일이 업데이트되지 않았습니다."
+fi
+
+#echo "set \$service_url http://13.125.124.14:${TARGET_PORT};" | tee /home/ubuntu/service_url.inc
 
 echo "> Now Nginx proxies to ${TARGET_PORT}."
 
