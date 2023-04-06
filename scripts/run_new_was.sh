@@ -37,5 +37,7 @@ fi
 # 타켓 포트에 jar파일을 이용해 새로운 서버 실행
 nohup java -jar -Dserver.port=${TARGET_PORT}  /home/ubuntu/app/SogonSogon-0.0.1-SNAPSHOT.jar  > /home/ubuntu/nohup.out 2>&1 &
 echo "> Now new WAS runs at ${TARGET_PORT}."
+
+echo "set \$service_url http://13.125.124.14:$TARGET_PORT;" > /home/ubuntu/service_url.inc
 exit 0
 
