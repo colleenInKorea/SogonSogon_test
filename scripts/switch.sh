@@ -18,7 +18,7 @@ fi
 # $ service_url.inc 파일을 현재 바뀐 서버의 포트로 변경
 if [ -n "$target_port" ]; then
     # service_url.inc 파일에 새로운 값을 쓰기
-    echo "set \$service_url http://13.125.124.14:$target_port;" > /home/ubuntu/service_url.inc
+    echo "set $service_url http://13.125.124.14:$target_port;" > /home/ubuntu/service_url.inc
     echo "service_url.inc 파일이 업데이트되었습니다."
 else
     echo "TARGET_PORT 환경 변수가 설정되어 있지 않습니다. service_url.inc 파일이 업데이트되지 않았습니다."
